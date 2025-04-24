@@ -1,0 +1,230 @@
+.slider-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    position: relative;
+}
+
+.slider-label {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.value {
+    position: absolute;
+    top: 40px;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #e0e0e0;
+    outline: none;
+    margin: 20px 0;
+    background-image: linear-gradient(to right, #4CAF50 0%, #4CAF50 50%, #e0e0e0 50%, #e0e0e0 100%);
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+
+.slider::-moz-range-progress {
+    background-color: #4CAF50;
+    height: 4px;
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    background: #4CAF50;
+    top: 62px;
+    left: 20px;
+    pointer-events: none;
+}
+
+.marks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #666;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.marks span {
+    position: relative;
+    padding-top: 15px;
+}
+
+.marks span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 8px;
+    background-color: #666;
+}
+
+.price-range-slider {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #E5E7EB;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.slider-fill {
+    position: absolute;
+    height: 6px;
+    background: #0EA5E9;
+    border-radius: 5px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 0;
+}
+
+.price-range-slider input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+    z-index: 2;
+}
+
+.price-range-slider input[type="range"]::-webkit-slider-thumb {
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 2px solid #0EA5E9;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.price-range-slider input[type="range"]::-moz-range-thumb {
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 2px solid #0EA5E9;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.price-range-slider input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+.price-range-slider input[type="range"]::-moz-range-track {
+    background: transparent;
+}
+
+.horizontal-line {
+    width: auto;
+    height: 1px;
+    background-color: #94A3B8;
+    margin: 24px auto 10px auto;
+}
+
+.price-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.price-inputs input {
+    appearance: none;
+    border: 1px solid #94A3B8;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    width: 100%;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #0EA5E9;
+    box-shadow: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #94A3B8;
+    border-radius: 25px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.input-container i {
+    position: absolute;
+    right: 8px;
+    font-size: 14px;
+    color: #4B5563;
+} 
